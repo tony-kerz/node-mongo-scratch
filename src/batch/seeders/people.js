@@ -2,7 +2,7 @@ import _ from 'lodash'
 import faker from 'faker'
 import RandExp from 'randexp'
 import debug from '@watchmen/debug'
-import meta from '../../../src/data/people'
+import meta from '../../data/people'
 
 const dbg = debug(__filename)
 

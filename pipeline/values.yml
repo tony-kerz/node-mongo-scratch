@@ -1,3 +1,4 @@
+name: node-mongo-api-scratch
 containers:
   - name: mongo
     image: mongo:3.6

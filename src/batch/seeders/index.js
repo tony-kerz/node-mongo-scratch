@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-//import getSeeder from '@watchmen/mongo-batch/dist/seeder'
-import seeder from './seeder'
+import getSeeder from '@watchmen/mongo-batch'
 import people from './people'
 
-export default seeder({seeders: [people]})
+export default getSeeder({seeders: [people]})
