@@ -1,0 +1,71 @@
+{
+  "name": "node-mongo-scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "repository": "tony-kerz/node-mongo-scratch",
+  "license": "ISC",
+  "scripts": {
+    "start": "cross-env DEBUG=app:*,lib:*,dbg:* babel-watch src",
+    "ava": "yarn ava-single test/ava",
+    "ava-single": "cross-env DEBUG=test:*,app:*,lib:*,dbg:* NODE_ENV=auto ava -s",
+    "seed": "cross-env DEBUG=*:seeder babel-node src/batch/seeders",
+    "cuke": "yarn cuke-feature test/cuke",
+    "cuke-feature":
+      "cross-env DEBUG=test:*,app:*,lib:*,dbg:* NODE_ENV=auto cucumber-js --compiler=js:babel-polyfill --compiler=js:babel-core/register",
+    "pretest": "xo",
+    "test": "npm run ava && npm run cuke",
+    "build":
+      "rm -rf build && mkdir build && cp -r config package.json git.json build && cd build && yarn install --production && babel ../src -d ./dist",
+    "index": "cross-env DEBUG=dbg:*,lib:* babel-node src/batch/indices",
+    "ingest": "cross-env DEBUG=dbg:*,lib:*,app:* thresh=20 babel-node src/batch/people.js",
+    "import": "script/import-csv-people.bash"
+  },
+  "dependencies": {
+    "@watchmen/debug": "1.1.1",
+    "@watchmen/helpr": "2.3.2",
+    "@watchmen/mongo-data": "2.3.1",
+    "@watchmen/mongo-helpr": "1.1.0",
+    "@watchmen/mongo-rest": "2.1.1",
+    "@watchmen/schema-helpr": "1.5.0",
+    "@watchmen/tymer": "^1.2.4",
+    "@watchmen/web-helpr": "2.3.1",
+    "axios": "0.18.0",
+    "babel-polyfill": "6.26.0",
+    "body-parser": "1.18.2",
+    "config": "1.30.0",
+    "cors": "2.8.4",
+    "express": "4.16.3",
+    "express-jwt": "5.3.1",
+    "fs-extra": "5.0.0",
+    "joi": "13.1.2",
+    "lodash": "4.17.5"
+  },
+  "devDependencies": {
+    "@watchmen/cuke-helpr": "3.2.0",
+    "@watchmen/mongo-batch": "1.2.0",
+    "@watchmen/mongo-cuke-helpr": "1.0.3",
+    "@watchmen/mongo-test-helpr": "1.0.0",
+    "@watchmen/test-helpr": "0.3.4",
+    "ava": "0.25.0",
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-stage-0": "6.24.1",
+    "babel-watch": "2.0.7",
+    "cross-env": "5.1.4",
+    "cucumber": "3.2.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "faker": "4.1.0",
+    "jsonwebtoken": "8.2.1",
+    "prettier": "1.11.1",
+    "randexp": "0.4.9",
+    "xo": "0.20.3"
+  },
+  "ava": {
+    "require": ["babel-register", "babel-polyfill"]
+  },
+  "xo": {
+    "useEslintrc": true
+  }
+}

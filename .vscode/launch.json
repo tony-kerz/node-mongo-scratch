@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run start",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+      "program": "${workspaceRoot}/src/index.js",
+      "sourceMaps": true,
+      "env": {
+        "DEBUG": "test:*,app:*,lib:*,dbg:*"
+      },
+      "console": "integratedTerminal",
+      "runtimeArgs": ["--nolazy"],
+      "stopOnEntry": false
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run ava test",
+      "program": "${workspaceRoot}/node_modules/ava/profile.js",
+      "args": ["-s", "${file}"],
+      "env": {
+        "DEBUG": "test:*,app:*,lib:*,dbg:*"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run ava single",
+      "program": "${workspaceRoot}/node_modules/ava/profile.js",
+      "args": ["-s", "test/ava/acl-test.js", "-m queryHook"],
+      "env": {
+        "DEBUG": "test:*,app:*,lib:*,dbg:*"
+      },
+      "console": "integratedTerminal",
+      "sourceMaps": true
+    }
+  ]
+}

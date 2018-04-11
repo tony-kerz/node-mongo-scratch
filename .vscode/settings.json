@@ -1,0 +1,4 @@
+{
+  "eslint.autoFixOnSave": true,
+  "xo.enable": true
+}
