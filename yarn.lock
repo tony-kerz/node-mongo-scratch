@@ -105,9 +105,9 @@
     jsondiffpatch "^0.2.5"
     lodash ">=4"
 
-"@watchmen/helpr@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@watchmen/helpr/-/helpr-2.3.2.tgz#730a5184949313a698246c275cfbd545e69b4a0d"
+"@watchmen/helpr@2.3.3", "@watchmen/helpr@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@watchmen/helpr/-/helpr-2.3.3.tgz#4527a462f77b8faa071446bb4374857d4e73b4f4"
   dependencies:
     "@watchmen/tymer" "1.2.4"
     debug "3.1.0"
@@ -115,9 +115,9 @@
     jsondiffpatch "0.3.9"
     lodash "4.17.5"
 
-"@watchmen/helpr@2.3.3", "@watchmen/helpr@^2.3.3":
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/@watchmen/helpr/-/helpr-2.3.3.tgz#4527a462f77b8faa071446bb4374857d4e73b4f4"
+"@watchmen/helpr@2.3.5":
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/@watchmen/helpr/-/helpr-2.3.5.tgz#abfcf32268f82001c06071fcb437fc986015a7a5"
   dependencies:
     "@watchmen/tymer" "1.2.4"
     debug "3.1.0"
@@ -154,7 +154,20 @@
     lodash "4.17.5"
     mongodb "3.0.6"
 
-"@watchmen/mongo-data@2.3.1", "@watchmen/mongo-data@^2.3.1":
+"@watchmen/mongo-data@2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@watchmen/mongo-data/-/mongo-data-2.3.3.tgz#1353e3931095c57d18d90da6833697f66aeae07f"
+  dependencies:
+    "@watchmen/debug" "1.1.1"
+    "@watchmen/helpr" "2.3.5"
+    "@watchmen/mongo-helpr" "1.1.0"
+    babel-polyfill "6.26.0"
+    config "1.30.0"
+    joi "13.1.2"
+    lodash "4.17.5"
+    mongodb "3.0.6"
+
+"@watchmen/mongo-data@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@watchmen/mongo-data/-/mongo-data-2.3.1.tgz#7acd0f94512971d8f8585f9dbad12eb38d52f50d"
   dependencies:
@@ -4485,9 +4498,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.11.1.tgz#61e43fc4cd44e68f2b0dfc2c38cd4bb0fccdcc75"
+prettier@1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.12.0.tgz#d26fc5894b9230de97629b39cae225b503724ce8"
 
 prettier@~1.10.2:
   version "1.10.2"

@@ -11,21 +11,19 @@
     "ava-single": "cross-env DEBUG=test:*,app:*,lib:*,dbg:* NODE_ENV=auto ava -s",
     "seed": "cross-env DEBUG=*:seeder babel-node src/batch/seeders",
     "cuke": "yarn cuke-feature test/cuke",
-    "cuke-feature":
-      "cross-env DEBUG=test:*,app:*,lib:*,dbg:* NODE_ENV=auto cucumber-js --compiler=js:babel-polyfill --compiler=js:babel-core/register",
+    "cuke-feature": "cross-env DEBUG=test:*,app:*,lib:*,dbg:* NODE_ENV=auto cucumber-js --compiler=js:babel-polyfill --compiler=js:babel-core/register",
     "pretest": "xo",
     "test": "npm run ava && npm run cuke",
-    "build":
-      "rm -rf build && mkdir build && cp -r config package.json git.json build && cd build && yarn install --production && babel ../src -d ./dist",
+    "build": "rm -rf build && mkdir build && cp -r config package.json git.json build && cd build && yarn install --production && babel ../src -d ./dist",
     "index": "cross-env DEBUG=dbg:*,lib:* babel-node src/batch/indices",
     "ingest": "cross-env DEBUG=dbg:*,lib:*,app:* thresh=20 babel-node src/batch/people.js",
     "import": "script/import-csv-people.bash"
   },
   "dependencies": {
     "@watchmen/debug": "1.1.1",
-    "@watchmen/helpr": "2.3.2",
+    "@watchmen/helpr": "2.3.5",
     "@watchmen/mongo-batch": "1.3.0",
-    "@watchmen/mongo-data": "2.3.1",
+    "@watchmen/mongo-data": "2.3.3",
     "@watchmen/mongo-helpr": "1.1.0",
     "@watchmen/mongo-rest": "2.1.1",
     "@watchmen/schema-helpr": "1.5.0",
@@ -58,12 +56,15 @@
     "eslint-plugin-prettier": "2.6.0",
     "faker": "4.1.0",
     "jsonwebtoken": "8.2.1",
-    "prettier": "1.11.1",
+    "prettier": "1.12.0",
     "randexp": "0.4.9",
     "xo": "0.20.3"
   },
   "ava": {
-    "require": ["babel-register", "babel-polyfill"]
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
   },
   "xo": {
     "useEslintrc": true
