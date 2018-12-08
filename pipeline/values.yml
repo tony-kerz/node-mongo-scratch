@@ -8,3 +8,4 @@ deploy:
     MONGO_HOST: mongodb-scratch.digital-cloud.svc.cluster.local
     # MONGO_REPLICA_SET: rs0
     MONGO_DB: people-{{env}}
+    NODE_ENV: {{env}}
