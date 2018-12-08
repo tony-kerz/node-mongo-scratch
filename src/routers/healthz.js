@@ -28,7 +28,7 @@ export default router.get('/', async (req, res, next) => {
     res.header('Expires', 0)
     res.send(response)
     dbg('response=%o', response)
-  } catch (err) {
-    next(err)
+  } catch (error) {
+    next(error)
   }
 })

@@ -1,16 +1,10 @@
-name: node-mongo-api-scratch
-containers:
-  - name: mongo
-    image: mongo:3.6
-external: false
-internalPort: 3000
-ingress:
-  enabled: true
-env:
-  MONGO_HOST: svc-cat-mongodb.default.svc.cluster.local
-  # MONGO_REPLICA_SET: rs0
-  MONGO_DB: people-{{env}}
-resources:
-  limits:
-    cpu: 500m
-    memory: 512Mi
+test:
+  containers:
+    - name: mongo
+      image: mongo:4.0.3
+deploy:
+  internalPort: 3000
+  env:
+    MONGO_HOST: mongodb-scratch.digital-cloud.svc.cluster.local
+    # MONGO_REPLICA_SET: rs0
+    MONGO_DB: people-{{env}}

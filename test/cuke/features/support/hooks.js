@@ -22,9 +22,9 @@ defineSupportCode(function({Before}) {
       const db = await getDb()
       const result = await initDb(db)
       dbg('before: init-db result=%o', result)
-    } catch (err) {
-      dbg('before: caught=%o', err)
-      throw err
+    } catch (error) {
+      dbg('before: caught=%o', error)
+      throw error
     }
   })
 })
