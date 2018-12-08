@@ -40,7 +40,8 @@
     "fs-extra": "7.0.1",
     "joi": "14.3.0",
     "lodash": "4.17.11",
-    "randexp": "0.5.3"
+    "randexp": "0.5.3",
+    "yn": "^2.0.0"
   },
   "devDependencies": {
     "@watchmen/cuke-helpr": "3.2.0",
