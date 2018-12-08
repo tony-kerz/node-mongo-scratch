@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import express from 'express'
 import jwt from 'express-jwt'
+import yn from 'yn'
 import {webHelpr} from '@watchmen/web-helpr'
 import {errorHandler, getStandardUser} from '@watchmen/mongo-rest'
 import debug from '@watchmen/debug'
@@ -26,7 +27,7 @@ if (!secretOrPublicKey) {
 }
 // dbg('secret-or-public-key=%o', secretOrPublicKey)
 
-const credentialsRequired = !_.get(config, 'listener.auth.relaxCredentials')
+const credentialsRequired = !yn(_.get(config, 'listener.auth.relaxCredentials'))
 const whitelist = _.get(config, 'listener.auth.whitelist')
 
 credentialsRequired || dbg('WARNING: configured without strictly requiring credentials')
