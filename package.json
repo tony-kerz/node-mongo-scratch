@@ -13,6 +13,7 @@
     "cuke": "yarn cuke-feature test/cuke",
     "cuke-feature": "cross-env DEBUG=test:*,app:*,lib:*,dbg:* NODE_ENV=auto cucumber-js --compiler=js:babel-polyfill --compiler=js:babel-core/register",
     "pretest": "xo",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary yarn ava",
     "test": "npm run ava && npm run cuke",
     "build": "rm -rf build && mkdir build && cp -r config package.json git.json build && cd build && yarn install --production && babel ../src -d ./dist",
     "index": "cross-env DEBUG=dbg:*,lib:* babel-node src/batch/indices",
@@ -59,7 +60,8 @@
     "eslint-plugin-prettier": "3.0.0",
     "jsonwebtoken": "8.4.0",
     "prettier": "1.15.3",
-    "xo": "0.23.0"
+    "xo": "0.23.0",
+    "nyc": "14.0.0"
   },
   "ava": {
     "require": [
