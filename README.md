@@ -55,3 +55,9 @@ docker run -d --name mongo -v $HOME/mongo:/data/db -p 27017:27017 mongo:<version
    > e.g. `yarn cuke-feature test/features/widgets.feature`
 1. `yarn cuke -- --name='{scenario name regex}'` (run a specific scenario)
    > e.g. `yarn cuke --name='create a client'`
+
+## Adding sonarqube scans to your project
+
+1. Please make sure that you generate lcov.info file for generating code coverage metrics for your project. Which npm package should be used for generating coverage is left upto teams. lcov.info file should be under a coverage directory 
+   at the root of the repo.
+2. groovy-pipeline will then read the lcov.info file and push metrics to sonarqube server.
