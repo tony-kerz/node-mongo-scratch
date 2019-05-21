@@ -5,8 +5,7 @@ test:
 deploy:
   internalPort: 3000
   env:
-    #MONGO_HOST: mongodb-scratch.digital-cloud.svc.cluster.local
-    MONGO_HOST: hcrlabmaster:HcrLabMasterS3cret@docdb-hcr-lab.caexdrqazk04.us-east-1.docdb.amazonaws.com
+    MONGO_HOST: mongodb-scratch.digital-cloud.svc.cluster.local
     # MONGO_REPLICA_SET: rs0
     #MONGO_DB: people-{{env}}
     MONGO_DB: people

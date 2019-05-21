@@ -1,0 +1,3 @@
+deploy:
+  env:
+    MONGO_HOST: hcrlabmaster:HcrLabMasterS3cret@docdb-hcr-lab.caexdrqazk04.us-east-1.docdb.amazonaws.com

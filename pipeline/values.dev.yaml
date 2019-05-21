@@ -1,0 +1,4 @@
+deploy:
+  env:
+    MONGO_HOST: wellbeing-dev.cluster-c40yjfsfegy3.us-east-1.docdb.amazonaws.com
+    MONGO_DB: people?ssl=true

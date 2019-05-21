@@ -3,7 +3,7 @@ module.exports = {
     host: 'localhost',
     // host: '10.17.7.140,10.17.7.141,10.17.7.142',
     // replicaSet: 'rs0',
-    db: 'people',
+    db: 'people?ssl=true',
     connectTimeoutMs: 30000,
     socketTimeoutMs: 30000,
     cursorTimeoutMs: 30000,
