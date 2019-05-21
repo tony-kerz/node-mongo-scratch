@@ -7,7 +7,7 @@ deploy:
   env:
     MONGO_HOST: mongodb-scratch.digital-cloud.svc.cluster.local
     # MONGO_REPLICA_SET: rs0
-    #MONGO_DB: people-{{env}}
+    # MONGO_DB: people-{{git.env}}
     MONGO_DB: people
-    #NODE_ENV: {{env}}
+    # NODE_ENV: {{git.env}}
     DEBUG: app:*,lib:*,dbg:*
