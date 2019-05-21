@@ -28,7 +28,7 @@
     "@watchmen/mongo-helpr": "1.1.2",
     "@watchmen/mongo-rest": "2.1.1",
     "@watchmen/schema-helpr": "1.5.0",
-    "@watchmen/tymer": "^1.2.4",
+    "@watchmen/tymer": "1.2.4",
     "@watchmen/web-helpr": "2.3.1",
     "axios": "0.18.0",
     "babel-polyfill": "6.26.0",
@@ -37,12 +37,12 @@
     "cors": "2.8.5",
     "express": "4.16.4",
     "express-jwt": "5.3.1",
-    "faker": "^4.1.0",
+    "faker": "4.1.0",
     "fs-extra": "7.0.1",
     "joi": "14.3.0",
     "lodash": "4.17.11",
     "randexp": "0.5.3",
-    "yn": "^2.0.0"
+    "yn": "2.0.0"
   },
   "devDependencies": {
     "@watchmen/cuke-helpr": "3.2.0",
