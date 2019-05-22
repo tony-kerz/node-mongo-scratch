@@ -55,19 +55,9 @@
     "@watchmen/test-helpr": "0.3.4",
     "ava": "1.4.1",
     "cross-env": "5.2.0",
-<<<<<<< HEAD
-    "cucumber": "3.2.1",
-    "eslint-config-prettier": "3.3.0",
-    "eslint-plugin-prettier": "3.0.0",
-    "jsonwebtoken": "8.4.0",
-    "prettier": "1.15.3",
-    "xo": "0.23.0",
-    "nyc": "14.0.0"
-=======
     "cucumber": "5.1.0",
     "jsonwebtoken": "8.5.1",
     "xo": "0.24.0"
->>>>>>> [babs] bump
   },
   "ava": {
     "require": [
