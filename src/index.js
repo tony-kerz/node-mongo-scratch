@@ -39,7 +39,7 @@ process.on('unhandledRejection', err => {
 export default (async function() {
 	// keep jwt filter early!
 	app.use((req, res, next) => {
-		dbg('auth=%o, secret=%o', req.get('authorization'), secretOrPublicKey)
+		// dbg('auth=%o, secret=%o', req.get('authorization'), secretOrPublicKey)
 		next()
 	})
 	app.use(
