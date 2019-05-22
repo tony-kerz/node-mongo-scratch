@@ -11,3 +11,4 @@ deploy:
     MONGO_DB: people
     # NODE_ENV: {{git.env}}
     DEBUG: app:*,lib:*,dbg:*
+    LISTENER_AUTH_RELAX_CREDENTIALS: true

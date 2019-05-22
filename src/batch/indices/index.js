@@ -4,7 +4,7 @@ import constants from '../../constants'
 import people from './people'
 
 const indexMap = {
-  [constants.PEOPLE]: people
+	[constants.PEOPLE]: people
 }
 
 getIndexer({indexMap})()

@@ -1,7 +1,7 @@
 module.exports = {
-  listener: {
-    auth: {
-      relaxCredentials: true
-    }
-  }
+	listener: {
+		auth: {
+			relaxCredentials: true
+		}
+	}
 }

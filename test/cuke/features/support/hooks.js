@@ -10,21 +10,21 @@ dbg('loaded hooks')
 // eslint-disable-next-line no-unused-expressions
 require('../../../../src').default
 
-defineSupportCode(function({setDefaultTimeout}) {
-  setDefaultTimeout(15 * 1000)
+defineSupportCode(({setDefaultTimeout}) => {
+	setDefaultTimeout(15 * 1000)
 })
 
-defineSupportCode(function({Before}) {
-  Before(async function(testCase) {
-    try {
-      dbg('before: feature=%o, scenario=%o', testCase.sourceLocation.uri, testCase.pickle.name)
-      initState()
-      const db = await getDb()
-      const result = await initDb(db)
-      dbg('before: init-db result=%o', result)
-    } catch (error) {
-      dbg('before: caught=%o', error)
-      throw error
-    }
-  })
+defineSupportCode(({Before}) => {
+	Before(async testCase => {
+		try {
+			dbg('before: feature=%o, scenario=%o', testCase.sourceLocation.uri, testCase.pickle.name)
+			initState()
+			const db = await getDb()
+			const result = await initDb(db)
+			dbg('before: init-db result=%o', result)
+		} catch (error) {
+			dbg('before: caught=%o', error)
+			throw error
+		}
+	})
 })

@@ -18,39 +18,40 @@ const zipRe = new RandExp(/\d{5}/)
 const numSeed = 100
 
 test('seed', async t => {
-  for (let i = 0; i < numSeed; i++) {
-    const context = {
-      user: {groups: ['group-1']},
-      standardUser: getStandardUser(),
-      isSeed: true
-    }
-    const data = {
-      _id: idRe.gen(),
-      name: {
-        first: faker.name.firstName(),
-        last: faker.name.lastName()
-      },
-      dob: faker.date.past(),
-      gender: _.sample(['M', 'F']),
-      ssn: ssnRe.gen(),
-      phone: phoneRe.gen(),
-      address: {
-        street: faker.address.streetAddress(),
-        city: faker.address.city(),
-        state: faker.address.stateAbbr(),
-        zip: zipRe.gen()
-      }
-    }
-    const element = await peopleData.create({data, context})
-    element.result.ok || dbg('element=%o', element)
-    t.truthy(element.result.ok)
-  }
+	for (let i = 0; i < numSeed; i++) {
+		const context = {
+			user: {groups: ['group-1']},
+			standardUser: getStandardUser(),
+			isSeed: true
+		}
+		const data = {
+			_id: idRe.gen(),
+			name: {
+				first: faker.name.firstName(),
+				last: faker.name.lastName()
+			},
+			dob: faker.date.past(),
+			gender: _.sample(['M', 'F']),
+			ssn: ssnRe.gen(),
+			phone: phoneRe.gen(),
+			address: {
+				street: faker.address.streetAddress(),
+				city: faker.address.city(),
+				state: faker.address.stateAbbr(),
+				zip: zipRe.gen()
+			}
+		}
+		// eslint-disable-next-line no-await-in-loop
+		const element = await peopleData.create({data, context})
+		element.result.ok || dbg('element=%o', element)
+		t.truthy(element.result.ok)
+	}
 })
 
 function getStandardUser() {
-  const _id = idRe.gen()
-  const first = faker.name.firstName()
-  const last = faker.name.lastName()
-  const email = `${first}.${last}@aetna.com`
-  return {_id, name: {first, last}, email}
+	const _id = idRe.gen()
+	const first = faker.name.firstName()
+	const last = faker.name.lastName()
+	const email = `${first}.${last}@aetna.com`
+	return {_id, name: {first, last}, email}
 }

@@ -2,9 +2,9 @@ import {joiValidator} from '@watchmen/helpr/dist/joi-helper'
 import schema from './schema'
 
 const validate = joiValidator({
-  schema
+	schema
 })
 
 export default async function({data, mode}) {
-  return validate({mode, data})
+	return validate({mode, data})
 }

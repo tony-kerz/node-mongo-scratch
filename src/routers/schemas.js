@@ -8,11 +8,11 @@ const dbg = debug(__filename)
 const router = express.Router()
 
 const schema = {
-  requests: people.describe()
+	requests: people.describe()
 }
 
 dbg('schemas=%s\n', pretty(schema))
 
 export default router.get('/', async (req, res) => {
-  res.send(stringify({schema}))
+	res.send(stringify({schema}))
 })
