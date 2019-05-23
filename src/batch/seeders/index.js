@@ -3,4 +3,4 @@ import '@babel/polyfill'
 import {getSeeder} from '@watchmen/mongo-batch'
 import people from './people'
 
-export default getSeeder({seeders: [people]})
+getSeeder({seeders: [people]})().then(() => process.exit())
