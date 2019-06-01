@@ -6,7 +6,9 @@ module.exports = {
 		replicaSet: 'MONGO_REPLICA_SET',
 		db: 'MONGO_DB',
 		poolSize: 'MONGO_POOL_SIZE',
-		sslCA: 'MONGO_SSL_CA'
+		sslCA: 'MONGO_SSL_CA',
+		user: 'MONGO_USER',
+		password: 'MONGO_PASSWORD'
 	},
 	listener: {
 		port: 'LISTENER_PORT',
