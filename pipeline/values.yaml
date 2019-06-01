@@ -12,3 +12,44 @@ deploy:
     # NODE_ENV: {{git.env}}
     DEBUG: app:*,lib:*,dbg:*
     LISTENER_AUTH_RELAX_CREDENTIALS: true
+  volumes:
+    - path: /app/rds.pem
+      data: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+    - path: /app/foo.yaml
+      data: |
+        foo: bar
+        baz: bip
+#
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: the-config-map
+# data:
+#   slash-app-slash-rds-dot-pem: |
+#     stuff-from-url
+#   slash-app-foo-dot-yaml: |
+#     foo: bar
+#     baz: bip
+
+#
+# apiVersion: extensions/v1beta1
+# kind: Deployment
+# spec:
+#   spec:
+#     containers:
+#        - name: foo
+#          image: feenix/foo:1.0.0
+#          volumeMounts:
+#            - name: slash-app-slash-rds-dot-pem
+#              mountPath: /app/rds.pem
+#              subPath: slash-app-slash-rds-dot-pem
+#            - name: slash-app-foo-dot-yaml
+#              mountPath: /app/foo.yaml
+#              subPath: slash-app-foo-dot-yaml
+#     volumes:
+#       - name: slash-app-slash-rds-dot-pem
+#         configMap:
+#           name: the-config-map
+#       - name: slash-app-foo-dot-yaml
+#         configMap:
+#           name: the-config-map
