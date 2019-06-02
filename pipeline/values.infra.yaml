@@ -9,3 +9,7 @@ deploy:
     MONGO_DB: people?ssl=true
     MONGO_USER: master
     MONGO_PASSWORD: s3cret
+    MONGO_SSL_CA: /app/data/rds.pem
+  volumes:
+    - path: /app/data/rds.pem
+      data: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
