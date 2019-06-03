@@ -9,7 +9,7 @@ deploy:
     MONGO_DB: people?ssl=true
     MONGO_USER: master
     MONGO_SSL_CA: /app/data/rds.pem
-  secret:
+  secrets:
     MONGO_PASSWORD: mongo/password
   volumes:
     - path: /app/data/rds.pem
