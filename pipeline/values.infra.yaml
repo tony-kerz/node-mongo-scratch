@@ -8,9 +8,6 @@ deploy:
     MONGO_HOST: scratch-infra.cluster-cacdh9v0zkat.us-east-1.docdb.amazonaws.com
     MONGO_DB: people?ssl=true
     MONGO_USER: master
-    MONGO_SSL_CA: /app/data/rds.pem
+    MONGO_SSL_CA: /app/rds.pem
   secrets:
     MONGO_PASSWORD: mongo/password
-  volumes:
-    - path: /app/data/rds.pem
-      data: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem

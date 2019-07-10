@@ -2,7 +2,4 @@ deploy:
   env:
     MONGO_HOST: wellbeing-dev.cluster-c40yjfsfegy3.us-east-1.docdb.amazonaws.com
     MONGO_DB: people?ssl=true
-    MONGO_SSL_CA: /app/data/rds.pem
-  volumes:
-    - path: /app/data/rds.pem
-      data: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+    MONGO_SSL_CA: /app/rds.pem
