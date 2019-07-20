@@ -6,9 +6,8 @@ deploy:
   internalPort: 3000
   env:
     MONGO_HOST: mongodb-scratch.digital-cloud.svc.cluster.local
-    # MONGO_REPLICA_SET: rs0
-    # MONGO_DB: people-{{git.env}}
     MONGO_DB: people
-    # NODE_ENV: {{git.env}}
+    MONGO_USER: master
+    MONGO_SSL_CA: /app/rds.pem
     DEBUG: app:*,lib:*,dbg:*
     LISTENER_AUTH_RELAX_CREDENTIALS: true

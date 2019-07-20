@@ -6,8 +6,5 @@ deploy:
     - infra
   env:
     MONGO_HOST: scratch-infra.cluster-cacdh9v0zkat.us-east-1.docdb.amazonaws.com
-    MONGO_DB: people?ssl=true
-    MONGO_USER: master
-    MONGO_SSL_CA: /app/rds.pem
   secrets:
-    MONGO_PASSWORD: mongo/password
+    MONGO_PASSWORD: /kv/{{git.org}}/{{git.env}}/doc-db/scratch/password
