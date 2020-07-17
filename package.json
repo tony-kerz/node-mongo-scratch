@@ -38,7 +38,7 @@
     "express-jwt": "5.3.1",
     "fs-extra": "5.0.0",
     "joi": "13.1.2",
-    "lodash": "4.17.5"
+    "lodash": "4.17.19"
   },
   "devDependencies": {
     "@watchmen/cuke-helpr": "3.2.0",
