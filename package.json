@@ -29,7 +29,7 @@
     "@watchmen/schema-helpr": "1.5.0",
     "@watchmen/tymer": "^1.2.4",
     "@watchmen/web-helpr": "2.3.1",
-    "axios": "0.18.0",
+    "axios": "0.21.1",
     "babel-polyfill": "6.26.0",
     "body-parser": "1.18.2",
     "config": "1.30.0",
